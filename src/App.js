@@ -17,6 +17,7 @@ function App() {
         <FaHome className="text-3xl text-blue-200" />
       </header>
       <main className="grow flex justify-center items-center">
+        {/* <MyClock /> */}
         {/* <MyDiv/> */}
         {/* <MyList /> */}
         {/* <Lotto/> */}
