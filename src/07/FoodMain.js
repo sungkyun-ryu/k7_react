@@ -13,9 +13,9 @@ export default function FoodMain() {
 
     const handleclk=(c) => {
         console.log(c);
-        let tm= fooddata.filter(item=> item["운영주체 분류"]==c)
-        .map(item => <FoodCard data={item} key={item.사업장명}/>)
-        setC1list(tm); 
+        console.log(name1.division)
+        let tm= name1.filter(item=> item.division === c);
+        
         console.log(tm)
     }           
 
@@ -40,7 +40,7 @@ export default function FoodMain() {
                {c1Bts}                
             </div>
             <div className="grid grid-cols-2 gap-2">
-               {name1}
+               {c1List}
             </div>
         </div>
     )
