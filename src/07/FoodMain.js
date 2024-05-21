@@ -20,7 +20,7 @@ export default function FoodMain() {
     }           
 
     const c1Bts= c1.map((item) => {
-        return <ButtonC key={item} name={item} btevent={()=>handleclk(item)} />
+        return <ButtonC key={item} name={item} btevent={()=>handleclk(item)} color='blue'/>
     })
     
 

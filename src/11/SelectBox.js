@@ -1,27 +1,19 @@
 import { useState, useEffect, useRef } from "react"
 
-export default function SelectBox({options, selRef}) {
-    
-    const choices = options.map(item => 
-                 <option key={item}>{item}</option>)      
-    
-    const handleChange=(e) =>{
-        e.preventDefault()
-        console.log(selRef.current.value)
-        }
-                
-  
-    return (
+export default function SelectBox({ init_text, options, selRef, handleChange }) {
+
+  const choices = options.map(item =>
+    <option key={item}>{item}</option>)
+
+
+
+  return (
     <div>
-      <form>
-        <select ref= {selRef} onChange={handleChange}
-            className="border border-black w-64 text-center">
-            <option defaultValue=''>
-                ------------ 지역 선택 ------------
-                </option>
-                {choices}
-        </select>        
-      </form>
+      <select ref={selRef} onChange={handleChange}
+        className="border border-black w-64 text-center">
+        <option> {init_text} </option>
+        {choices}
+      </select>
     </div>
   )
 }

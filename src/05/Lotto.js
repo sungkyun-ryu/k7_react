@@ -32,7 +32,7 @@ export default function Lotto() {
             <div className="flex text-4xl items-center justify-around">
                 {tm}
             </div>
-            <ButtonC btevent={handleClick} name={caption} />
+            <ButtonC btevent={handleClick} name={caption} color='blue' />
         </div>
     )
 }
