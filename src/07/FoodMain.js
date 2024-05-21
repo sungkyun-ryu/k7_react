@@ -42,6 +42,9 @@ export default function FoodMain() {
             <div className="grid grid-cols-2 gap-2">
                {c1List}
             </div>
+            <div>
+                {name1}
+            </div>
         </div>
     )
 }

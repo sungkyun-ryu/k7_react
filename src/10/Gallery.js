@@ -46,14 +46,14 @@ export default function Gallery() {
         search_keyword.current.focus()
         }
 
-    const pressEnter = (e) =>{
-        e.preventDefault()
+    // const pressEnter = (e) =>{
+    //     e.preventDefault()
         
-        if(e.key === 'Enter') {            
-            console.log(e.key)
-            urldata(e);            
-        }
-    }
+    //     if(e.key === 'Enter') {            
+    //         console.log(e.key)
+    //         urldata(e);            
+    //     }
+    // }
    
     useEffect(()=>{
         if(!tourdata) return ;
@@ -79,7 +79,8 @@ export default function Gallery() {
                         <input type='text' 
                             className="border-2 border-black w-full"
                             ref={search_keyword} 
-                            onKeyDown={pressEnter}/>
+                            // onKeyDown={pressEnter}
+                                                            />
                                 
                     </form>
                     <div className=" flex justify-center" >
