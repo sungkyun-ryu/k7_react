@@ -18,6 +18,8 @@ import Gallery from './10/Gallery';
 import ButtonC from './UI/ButtonC';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import Frcst from './13/Frcst';
+import Frcst_list from './13/Frcst_list';
 
 
 function App() {
@@ -31,30 +33,37 @@ function App() {
                              bg-sky-900 text-white">
           <p>React Practice</p>
           <div className='w-full font-thin text-base flex justify-center items-center'>
-            <Link to='/clock'
+            <ul className='flex'>
+              <li><Link to='/clock'
               className="px-3 py-1 m-2 border rounded-xl bg-sky-700">
               시계
-            </Link>
-            <Link to='/sightseeing'
+            </Link></li>
+            <li> <Link to='/sightseeing'
               className="px-3 py-1 m-2 border rounded-xl bg-sky-700">
               전국 관광지
-            </Link>
-            <Link to='/accidents'
+            </Link></li>
+            <li><Link to='/accidents'
               className="px-3 py-1 m-2 border rounded-xl bg-sky-700">
               교통사고 정보
-            </Link>
-            <Link to='/boxoffice'
+            </Link></li>
+            <li><Link to='/boxoffice'
               className="px-3 py-1 m-2 border rounded-xl bg-sky-700">
               박스오피스
-            </Link>
-            <Link to='/lotto'
+            </Link></li>
+            <li><Link to='/lotto'
               className="px-3 py-1 m-2 border rounded-xl bg-sky-700">
               로또
-            </Link>
-            <Link to='/foodbank'
+            </Link></li>
+            <li><Link to='/foodbank'
               className="px-3 py-1 m-2 border rounded-xl bg-sky-700">
               푸드뱅크
-            </Link>
+            </Link></li>
+            <li><Link to='/frcst'
+              className="px-3 py-1 m-2 border rounded-xl bg-sky-700">
+              예보
+            </Link></li>
+
+            </ul>
           </div>
           <FaHome className="text-3xl text-blue-200 ml-3" />
         </header>
@@ -79,6 +88,8 @@ function App() {
             <Route path='/boxoffice' element={<BoxOffice />}></Route>
             <Route path='/lotto' element={<Lotto />}></Route>
             <Route path='/foodbank' element={<FoodMain />}></Route>
+            <Route path='/frcst' element={<Frcst />}></Route>
+            <Route path='/frcstlst' element={<Frcst_list />}></Route>
           </Routes>
 
         </main>
